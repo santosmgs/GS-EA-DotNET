@@ -151,3 +151,9 @@ O **Energy Awareness API** é uma solução que calcula o consumo energético de
 ---
 
 ## Integrantes
+
+- João Gabriel - RM 552078
+- Felipe Morais - RM 551463
+- Ian Navas - RM 550133
+- Miguel Santos - RM 551640
+- Renan Vieira - RM 551813
