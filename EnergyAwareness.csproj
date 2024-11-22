@@ -30,4 +30,8 @@
         </PackageReference>
     </ItemGroup>
 
+    <ItemGroup>
+      <Content Remove="energy-awareness-firebase-adminsdk-rhkft-3a71cf7291.json" />
+    </ItemGroup>
+
 </Project>
