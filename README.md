@@ -68,7 +68,7 @@ dotnet add package Microsoft.AspNetCore.Authentication.JwtBearer --version 6.0.1
 1. **Clone o repositório:**
 
    ```bash
-   git clone https://github.com/SEU_USUARIO/GS-EnergyAwarenessDotNET.git
+   git clone https://github.com/santosmgs/GS-EnergyAwarenessDotNET.git
    ```
 
 2. **Instale as dependências:** Navegue até a pasta do projeto e execute:
