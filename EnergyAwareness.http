@@ -1,0 +1,108 @@
+@EnergyAwareness_HostAddress = http://localhost:5119
+@Firebase_Credentials = energy-awareness-firebase-adminsdk-rhkft-3a71cf7291.json
+
+### Usuários - Listar todos
+GET {{EnergyAwareness_HostAddress}}/api/usuario
+Accept: application/json
+
+###
+
+
+### Teste criando jwt
+POST http://localhost:5119/api/auth/login
+Content-Type: application/json
+Accept: application/json
+
+{
+  "email": "eaadmin@energy.com",
+  "password": "admin007"
+}
+
+
+###
+
+### Usuários - Criar um usuário
+POST http://localhost:5119/api/usuario
+Content-Type: application/json
+Accept: application/json
+
+{
+  "cpf": "12345678900",
+  "dsEmail": "user@energy.com",
+  "nmUsuario": "Usuário Teste",
+  "senha": "12345678"
+}
+
+
+###
+
+### Usuários - Obter por ID
+GET {{EnergyAwareness_HostAddress}}/api/usuario/1
+Accept: application/json
+
+###
+
+### Eletrônicos - Listar todos
+GET {{EnergyAwareness_HostAddress}}/api/eletronico
+Accept: application/json
+
+###
+
+### Eletrônicos - Criar um eletrônico
+POST {{EnergyAwareness_HostAddress}}/api/eletronico
+Content-Type: application/json
+Accept: application/json
+
+{
+  "nome": "Geladeira",
+  "marca": "Brastemp",
+  "potencia": 120,
+  "horasDeUso": 6
+}
+
+###
+
+### Eletrônicos - Obter por ID
+GET {{EnergyAwareness_HostAddress}}/api/eletronico/1
+Accept: application/json
+
+###
+
+### Valor - Calcular consumo total para um usuário
+GET {{EnergyAwareness_HostAddress}}/api/valor/consumo-total/1
+Accept: application/json
+
+Authorization: Bearer eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiJURmpEMTFBZEk0YW9FR2wzaW45RTJZNjlOdFUyIiwiaXNzIjoiZmlyZWJhc2UtYWRtaW5zZGstcmhrZnRAZW5lcmd5LWF3YXJlbmVzcy5pYW0uZ3NlcnZpY2VhY2NvdW50LmNvbSIsInN1YiI6ImZpcmViYXNlLWFkbWluc2RrLXJoa2Z0QGVuZXJneS1hd2FyZW5lc3MuaWFtLmdzZXJ2aWNlYWNjb3VudC5jb20iLCJhdWQiOiJodHRwczovL2lkZW50aXR5dG9vbGtpdC5nb29nbGVhcGlzLmNvbS9nb29nbGUuaWRlbnRpdHkuaWRlbnRpdHl0b29sa2l0LnYxLklkZW50aXR5VG9vbGtpdCIsImV4cCI6MTczMjMwMDYzOSwiaWF0IjoxNzMyMjk3MDM5fQ.NqDoH937Oe2_VDZy4d4Ivvb6-v3R4dkjOQ3qf4dovAS2q6Zx-tGyjswrOuPjaG-XtD2myB46twNtgXqu2ijTbs4C5Qa9kHYeXfzW8d5s7frjr4x1T_kzqHiLqs80afmWVWMuXYb79l60XUQ9CXWe92QkrjCVRe-0WJZHwbqTMr9ABakwfmfLTgHxHMC1UaWq9zvTaoJfa-3_-c-e_1azN6zaxzxWUMlKkJoxZobExID3jO8q-aq-1pWViklP-Wp6BAHXJg0_WEL0N7m0GN10C0eJ7hR1ZNrWKmyNGOGcVQKUzBFuBQVDRgtTy4cdD7GWWxKsS4ntzvuk7POJdwjiiw
+
+###
+
+### Consulta - Listar todas
+GET {{EnergyAwareness_HostAddress}}/api/consulta
+Accept: application/json
+
+###
+
+### Consulta - Criar uma consulta
+POST {{EnergyAwareness_HostAddress}}/api/consulta
+Content-Type: application/json
+Accept: application/json
+
+{
+  "usuarioId": 1,
+  "horasDeUso": 5,
+  "taxa": 0.5,
+  "regiao": "Sudeste"
+}
+
+###
+
+### Consulta - Obter por ID
+GET {{EnergyAwareness_HostAddress}}/api/consulta/1
+Accept: application/json
+
+###
+
+### Endpoint protegido (Autenticação necessária)
+GET {{EnergyAwareness_HostAddress}}/api/auth/protected
+Authorization: Bearer eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiJURmpEMTFBZEk0YW9FR2wzaW45RTJZNjlOdFUyIiwiaXNzIjoiZmlyZWJhc2UtYWRtaW5zZGstcmhrZnRAZW5lcmd5LWF3YXJlbmVzcy5pYW0uZ3NlcnZpY2VhY2NvdW50LmNvbSIsInN1YiI6ImZpcmViYXNlLWFkbWluc2RrLXJoa2Z0QGVuZXJneS1hd2FyZW5lc3MuaWFtLmdzZXJ2aWNlYWNjb3VudC5jb20iLCJhdWQiOiJodHRwczovL2lkZW50aXR5dG9vbGtpdC5nb29nbGVhcGlzLmNvbS9nb29nbGUuaWRlbnRpdHkuaWRlbnRpdHl0b29sa2l0LnYxLklkZW50aXR5VG9vbGtpdCIsImV4cCI6MTczMjMwMDYzOSwiaWF0IjoxNzMyMjk3MDM5fQ.NqDoH937Oe2_VDZy4d4Ivvb6-v3R4dkjOQ3qf4dovAS2q6Zx-tGyjswrOuPjaG-XtD2myB46twNtgXqu2ijTbs4C5Qa9kHYeXfzW8d5s7frjr4x1T_kzqHiLqs80afmWVWMuXYb79l60XUQ9CXWe92QkrjCVRe-0WJZHwbqTMr9ABakwfmfLTgHxHMC1UaWq9zvTaoJfa-3_-c-e_1azN6zaxzxWUMlKkJoxZobExID3jO8q-aq-1pWViklP-Wp6BAHXJg0_WEL0N7m0GN10C0eJ7hR1ZNrWKmyNGOGcVQKUzBFuBQVDRgtTy4cdD7GWWxKsS4ntzvuk7POJdwjiiw
+Accept: application/json
