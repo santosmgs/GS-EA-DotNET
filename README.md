@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # GS-EnergyAwarenessDotNET
 
 ---
@@ -157,3 +158,6 @@ O **Energy Awareness API** é uma solução que calcula o consumo energético de
 - Ian Navas - RM 550133
 - Miguel Santos - RM 551640
 - Renan Vieira - RM 551813
+=======
+# GS-EA-DotNET
+>>>>>>> de7237603cb378f22f0c06e2aa950d41a257a3f0
